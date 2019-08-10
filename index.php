@@ -10,8 +10,25 @@
 </head>
 <body>
     <div class="container">
-
         <img src="assets/img/logosmash.png" alt="Logo SmashBug" id="logo" class="rounded mx-auto d-block">
+
+        <div class="form">
+            <form action="" method="post">
+                <label for="" class="form-group" id="level-title">Nível</label>
+                <select name="" id="" class="form-control" id="level">
+                    <option value="">Fácil</option>
+                    <option value="">Médio</option>
+                    <option value="">Difícil</option>
+                </select>
+
+                <input type="text" name="name" maxlength="10" placeholder="Nome do jogador" class="form-control" id="name">
+
+                <input type="submit" value="Jogar" class="form-control">
+            </form>
+        </div>
+
+        
+
     </div>
     
 
