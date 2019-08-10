@@ -27,7 +27,17 @@
             </form>
         </div>
 
-        
+        <div class="records">
+            <h2>Recordes</h2>
+            <table class="table">
+                <thead>
+                    <th>Fácil</th>
+                    <th>Médio</th>
+                    <th>Difícil</th>
+                </thead>
+            </table>
+
+        </div>
 
     </div>
     
