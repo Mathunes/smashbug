@@ -1,10 +1,3 @@
-<?php
-    session_start();
-    if (isset($_POST['start'])) {
-        $_SESSION['start'] = true;
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

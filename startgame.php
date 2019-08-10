@@ -2,18 +2,20 @@
 
 session_start();
 
-if (!isset($_SESSION['start'])) {
-    header('location: index.php');
-}
+    require_once 'db_connect.php';
 
-require_once 'db_connect.php';
+    require_once 'Classes/Start/Start.php';
 
-require_once 'Classes/Start/Start.php';
+    $start = new Start();
+    $start->setName($_POST['name']);
+    $start->setLevel($_POST['level']);
 
-$start = new Start();
-$start->setName($_POST['name']);
-$start->setLevel($_POST['level']);
+    if ($start->getLevel() == '') {
+        header('location: index.php');
+    } else {
+        $_SESSION['dataPlayer'] = $start;
 
-$_SESSION['dataPlayer'] = $start;
+        header('location: game.php');
+    }
 
-header('location: game.php');
+    
