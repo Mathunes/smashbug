@@ -24,6 +24,10 @@ $(function(){
             color: '#fff'
         });
 
+        $('.modal-container .btn').css({
+            color: '#fff'
+        });
+
         darkmode = true;
     }
 
@@ -50,6 +54,10 @@ $(function(){
 
         $('.records table').css({
             color: '#000'
+        });
+
+        $('.modal-container .btn').css({
+            color: '#fff'
         });
 
         darkmode = false;
