@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (isset($_POST['start'])) {
+        $_SESSION['start'] = true;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -23,7 +30,7 @@
 
                 <input type="text" name="name" maxlength="10" placeholder="Nome do jogador" class="form-control" id="name">
 
-                <input type="submit" value="Jogar" class="form-control">
+                <input type="submit" value="Jogar" name="start" class="form-control">
             </form>
         </div>
 
