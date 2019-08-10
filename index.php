@@ -23,9 +23,9 @@
             <form action="startgame.php" method="post">
                 <label for="level" class="form-group" id="level-title">Nível</label>
                 <select name="level" class="form-control" id="level">
-                    <option value="">Fácil</option>
-                    <option value="">Médio</option>
-                    <option value="">Difícil</option>
+                    <option value="Fácil">Fácil</option>
+                    <option value="Médio">Médio</option>
+                    <option value="Difícil">Difícil</option>
                 </select>
 
                 <input type="text" name="name" maxlength="10" placeholder="Nome do jogador" class="form-control" id="name">
