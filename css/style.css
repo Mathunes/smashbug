@@ -64,3 +64,16 @@
 .modal-container .modal .modal-dialog .modal-content .modal-footer h6 {
     margin-bottom: 16px;
 }
+
+.container-game .info {
+    margin: 0 auto;
+    
+}
+
+.container-game .info .time {
+    background-color: antiquewhite;
+}
+
+.container-game .info .score {
+    background-color: blueviolet;
+}
