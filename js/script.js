@@ -57,7 +57,7 @@ $(function(){
         });
 
         $('.modal-container .btn').css({
-            color: '#fff'
+            color: '#000'
         });
 
         darkmode = false;
