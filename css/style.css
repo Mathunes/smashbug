@@ -1,0 +1,8 @@
+.container #logo {
+    width: 40%;
+}
+@media (max-width: 700px) {
+    .container #logo {
+        width: 70%;
+    }   
+}
