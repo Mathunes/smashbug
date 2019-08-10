@@ -45,9 +45,11 @@
             <h2>Recordes</h2>
             <table class="table">
                 <thead>
-                    <th>Fácil</th>
-                    <th>Médio</th>
-                    <th>Difícil</th>
+                    <tr class="row">
+                        <th class="col-4">Fácil</th>
+                        <th class="col-4">Médio</th>
+                        <th class="col-4">Difícil</th>
+                    </tr>
                 </thead>
             </table>
 
