@@ -10,6 +10,8 @@ $(function(){
             transition: '0.4s'
         });
 
+        $('#logo').attr('src', 'assets/img/logosmash-darkmode.png');
+
         darkmode = true;
     }
 
@@ -23,6 +25,8 @@ $(function(){
         $('body').css({
             backgroundColor: '#fff'
         });
+
+        $('#logo').attr('src', 'assets/img/logosmash.png');
 
         darkmode = false;
     }
