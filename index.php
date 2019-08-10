@@ -20,7 +20,7 @@
         <img src="assets/img/logosmash.png" alt="Logo SmashBug" id="logo" class="rounded mx-auto d-block">
 
         <div class="form">
-            <form action="" method="post">
+            <form action="startgame.php" method="post">
                 <label for="" class="form-group" id="level-title">Nível</label>
                 <select name="" id="" class="form-control" id="level">
                     <option value="">Fácil</option>

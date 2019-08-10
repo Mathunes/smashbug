@@ -8,4 +8,9 @@ if (!isset($_POST['start'])) {
 
 require_once 'db_connect.php';
 
-$name = $_POST['name'];
+require_once 'Classes/Start/Start.php';
+
+$start = new Start();
+$start->setName($_POST['name']);
+$start->setLevel($_POST['level']);
+
