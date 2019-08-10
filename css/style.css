@@ -54,3 +54,9 @@
 #darkmode {
     width: 10%
 }
+
+.modal .modal-dialog .modal-content .modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}

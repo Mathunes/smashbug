@@ -55,12 +55,12 @@
 
 
         <div class="modal-container">
-            <button type="button" class="btn" data-toggle="modal" data-target="#modal">
+            <button type="button" class="btn" data-toggle="modal" data-target="#modal-about">
                 Sobre
             </button>
 
             
-            <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal fade" id="modal-about" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -69,8 +69,14 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
-                            ...
+                        <div class="modal-body text-center">
+                            Apenas esmague os insetos!
+                        </div>
+                        <div class="modal-footer text-center">
+                            <h6>
+                                Contato <br>
+                                <a href="mailto:matheusantunes720@gmail.com">matheusantunes720@gmail.com</a>
+                            </h6>
                         </div>
                     </div>
                 </div>
