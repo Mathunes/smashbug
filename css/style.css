@@ -4,7 +4,10 @@
 @media (max-width: 700px) {
     .container #logo {
         width: 70%;
-    }   
+    }
+    .container-darkmode #darkmode {
+        width: 20%
+    }
 }
 
 .form {
