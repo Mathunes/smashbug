@@ -13,4 +13,3 @@ require_once 'Classes/Start/Start.php';
 $start = new Start();
 $start->setName($_POST['name']);
 $start->setLevel($_POST['level']);
-
