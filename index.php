@@ -74,10 +74,10 @@
                             Apenas esmague os insetos!
                         </div>
                         <div class="modal-footer text-center">
-                            <h6>
-                                Contato <br>
-                                <a href="mailto:matheusantunes720@gmail.com">matheusantunes720@gmail.com</a>
-                            </h6>
+                            <div>
+                                <h6>Contato</h6>
+                               <a href="mailto:matheusantunes720@gmail.com">matheusantunes720@gmail.com</a>
+                            </div>
                         </div>
                     </div>
                 </div>

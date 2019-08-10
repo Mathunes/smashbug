@@ -60,3 +60,7 @@
     align-items: center;
     justify-content: center
 }
+
+.modal-container .modal .modal-dialog .modal-content .modal-footer h6 {
+    margin-bottom: 16px;
+}
