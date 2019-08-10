@@ -1,17 +1,21 @@
 $(function(){
 
+    var darkmode = false;
+
     function darkmodeActivate() {
-        $('#darkmode').attr('src', 'assets/img/firefly.png');
+        $('#darkmode').attr('src', 'assets/img/firefly-darkmode.png');
 
         $('body').css({
             backgroundColor: '#2B2B2B',
             transition: '0.4s'
         });
+
+        darkmode = true;
     }
 
     function darkmodeDisable() {
         $('#darkmode')
-            .attr('src', 'assets/img/firefly-dark.png')
+            .attr('src', 'assets/img/firefly.png')
             .css({
                 transition: '0.4s'
             });
@@ -19,15 +23,17 @@ $(function(){
         $('body').css({
             backgroundColor: '#fff'
         });
+
+        darkmode = false;
     }
 
     $('#darkmode').click(function(){
 
-        if ($(this).attr('src' ) == 'assets/img/firefly-dark.png') {
+        if (!darkmode) {
 
             darkmodeActivate();
 
-        } else if ($(this).attr('src') == 'assets/img/firefly.png') {
+        } else {
         
             darkmodeDisable();
         }

@@ -22,7 +22,7 @@
                 <img src="assets/img/logosmash.png" alt="Logo SmashBug" id="logo">
             </div>
             <div class="col-4 container-darkmode">
-                <img src="assets/img/firefly-dark.png" alt="Vagalume tomada do darkmode" id="darkmode" class="align-middle">
+                <img src="assets/img/firefly.png" alt="Vagalume tomada do darkmode" id="darkmode" class="align-middle">
             </div>
         </div>
 
