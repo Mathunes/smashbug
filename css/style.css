@@ -1,5 +1,5 @@
 .container #logo {
-    width: 40%;
+    width: 60%;
 }
 @media (max-width: 700px) {
     .container #logo {
@@ -36,4 +36,18 @@
 .records {
     padding-top: 40px;
     text-align: center
+}
+
+#logo {
+    float: right;
+}
+
+.container-darkmode {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#darkmode {
+    width: 10%
 }

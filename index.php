@@ -17,7 +17,14 @@
 </head>
 <body>
     <div class="container">
-        <img src="assets/img/logosmash.png" alt="Logo SmashBug" id="logo" class="rounded mx-auto d-block">
+        <div class="row">
+            <div class="col-8">
+                <img src="assets/img/logosmash.png" alt="Logo SmashBug" id="logo">
+            </div>
+            <div class="col-4 container-darkmode">
+                <img src="assets/img/firefly-dark.png" alt="Vagalume tomada do darkmode" id="darkmode" class="align-middle">
+            </div>
+        </div>
 
         <div class="form">
             <form action="startgame.php" method="post">
