@@ -54,7 +54,8 @@
         </div>
 
 
-        <div class="modal-container">
+        <div class="modal-container d-flex justify-content-center">
+
             <button type="button" class="btn" data-toggle="modal" data-target="#modal-about">
                 Sobre
             </button>
