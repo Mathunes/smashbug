@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (isset($_POST['start'])) {
+        $_SESSION['start'] = true;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,7 +20,7 @@
         <img src="assets/img/logosmash.png" alt="Logo SmashBug" id="logo" class="rounded mx-auto d-block">
 
         <div class="form">
-            <form action="" method="post">
+            <form action="startgame.php" method="post">
                 <label for="" class="form-group" id="level-title">Nível</label>
                 <select name="" id="" class="form-control" id="level">
                     <option value="">Fácil</option>
@@ -23,7 +30,7 @@
 
                 <input type="text" name="name" maxlength="10" placeholder="Nome do jogador" class="form-control" id="name">
 
-                <input type="submit" value="Jogar" class="form-control">
+                <input type="submit" value="Jogar" name="start" class="form-control">
             </form>
         </div>
 
