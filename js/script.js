@@ -12,6 +12,18 @@ $(function(){
 
         $('#logo').attr('src', 'assets/img/logosmash-darkmode.png');
 
+        $('.form form label').css({
+            color: '#fff'
+        });
+
+        $('.records h2').css({
+            color: '#fff'
+        });
+
+        $('.records table').css({
+            color: '#fff'
+        });
+
         darkmode = true;
     }
 
@@ -27,6 +39,18 @@ $(function(){
         });
 
         $('#logo').attr('src', 'assets/img/logosmash.png');
+
+        $('.form form label').css({
+            color: '#000'
+        });
+
+        $('.records h2').css({
+            color: '#000'
+        });
+
+        $('.records table').css({
+            color: '#000'
+        });
 
         darkmode = false;
     }
