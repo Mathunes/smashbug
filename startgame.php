@@ -16,4 +16,4 @@ $start->setLevel($_POST['level']);
 
 $_SESSION['dataPlayer'] = $start;
 
-header('location: smashbug.php');
+header('location: game.php');
