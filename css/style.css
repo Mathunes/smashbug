@@ -93,6 +93,10 @@
     font-size: 12px
 }
 
+.container-game .container-bug {
+    height: 90vh
+}
+
 .container-game .container-bug img {
     width: 80px
 }

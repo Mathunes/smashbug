@@ -76,11 +76,27 @@ $(function(){
         
     });
 
-    setInterval(function(){
-        
+    // =====================================================================================================
+
+    function timeControl(){
         var seconds = $('.container-game .info .time p:last').text();
         seconds--;
         $('.container-game .info .time p:last').text(seconds);
+    }
+
+    function scoreControl(){
+        var score = $('.container-game .info .score p:last').text();
+        score++;
+        $('.container-game .info .score p:last').text(score);
+    }
+
+    function moveBUg
+
+    setInterval(function(){
+        
+        timeControl();
+        
     }, 1000);
     
+    $('.container-game .container-bug img').click(scoreControl);
 })

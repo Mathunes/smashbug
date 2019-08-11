@@ -28,7 +28,7 @@
             </div>
             <div class="score info-item col-6">
                 <p>Pontuação</p>
-                <p>3</p>
+                <p>0</p>
             </div>
         </div>
         <div class="container-bug">
