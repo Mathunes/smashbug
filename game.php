@@ -22,13 +22,13 @@
 <body>
     <div class="container-game">
         <div class="info row">
-            <div class="time col-6">
+            <div class="time info-item col-6">
                 <p>Tempo</p>
-                <span>0:32</span>
+                <p>0:32</p>
             </div>
-            <div class="score col-6">
+            <div class="score info-item col-6">
                 <p>Pontuação</p>
-                <span>2</span>
+                <p>3</p>
             </div>
         </div>
     </div>
