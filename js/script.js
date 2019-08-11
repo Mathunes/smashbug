@@ -74,6 +74,13 @@ $(function(){
             darkmodeDisable();
         }
         
-    })
+    });
 
+    setInterval(function(){
+        
+        var seconds = $('.container-game .info .time p:last').text();
+        seconds--;
+        $('.container-game .info .time p:last').text(seconds);
+    }, 1000);
+    
 })

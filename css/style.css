@@ -92,3 +92,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 12px
 }
+
+.container-game .container-bug img {
+    width: 80px
+}
