@@ -1,8 +1,10 @@
 $(function(){
+
     function timeControl(){
         var seconds = $('.container-game .info .time p:last').text();
         seconds--;
         $('.container-game .info .time p:last').text(seconds);
+        // if (seconds == 0)
     }
 
     function scoreAdd(){
@@ -11,9 +13,10 @@ $(function(){
         $('.container-game .info .score p:last').text(score);
     }
 
+    var width = $('.container-game .container-bug').width();
+    var height = $('.container-game .container-bug').height();
+
     function randomStartPosition() {
-        var width = $('.container-game .container-bug').width();
-        var height = $('.container-game .container-bug').height();
 
         var positionX = Math.floor(Math.random() * width);
         var positionY = Math.floor(Math.random() * height);
@@ -30,14 +33,14 @@ $(function(){
             positionY -= 80;
         }
 
-        if (width > 700) {
+        if (width > 1200) {
             $('.container-game .container-bug img').css({
                 left: positionX+'px',
                 top: positionY+'px',
                 width: '80px',
                 transition: '.2s'
             })
-        } else if (width > 600) {
+        } else if (width > 800) {
             $('.container-game .container-bug img').css({
                 left: positionX+'px',
                 top: positionY+'px',
@@ -71,8 +74,6 @@ $(function(){
     }
 
     function moveBug(){
-        var width = $('.container-game .container-bug').width();
-        var height = $('.container-game .container-bug').height();
 
         var positionX = Math.floor(Math.random() * width);
         var positionY = Math.floor(Math.random() * height);
@@ -122,7 +123,7 @@ $(function(){
     function start() {
         var level = getLevel();
         
-        setInterval(timeControl, 1000);
+        timer = setInterval(timeControl, 1000);
         randomStartPosition();
 
         switch (level) {
