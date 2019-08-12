@@ -1,8 +1,37 @@
 $(function(){
 
+    function getLevel() {
+        return parseInt($('.container-game .info .data-player input#level-game').val());
+    }
+
+    function getName() {
+        return $('.container-game .info .data-player input#name-player').val();
+    }
+
+    function getScore() {
+        return $('.container-game .info .score p:last').text();
+    }
+
     var timer;
     function endGame() {
+        var score = getScore();
+        var name = getName();
+        var level = getLevel();
+
         $('#modal-endgame').modal('show');
+        $('#modal-endgame #new-game').click(function(){
+            $.ajax({
+                type: "POST",
+                url: "startgame.php",
+                data: {name: name, level: level},
+                dataType: "dataType",
+                success: function (response) {
+                    alert('enviado');
+                }
+            });
+
+        });
+
     }
 
     function timeControl(){
@@ -118,14 +147,6 @@ $(function(){
                 $('.container-game .container-bug img').attr('src', 'assets/img/wasp.svg')
                 break;
         }
-    }
-
-    function getLevel() {
-        return parseInt($('.container-game .info .data-player input#level-game').val());
-    }
-
-    function getName() {
-        return parseInt($('.container-game .info .data-player input#name-player').val());
     }
 
     function start() {
