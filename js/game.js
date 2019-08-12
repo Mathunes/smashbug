@@ -65,20 +65,62 @@ $(function(){
         })
     }
 
-    function getLevel() {
-        console.log($('.container-game .info .data-player').val());
+    function changeLevelBug(level) {
+        switch(level) {
+            case 1:
+                $('.container-game .container-bug img').attr('src', 'assets/img/ant.svg')
+                break;
+            case 2:
+                $('.container-game .container-bug img').attr('src', 'assets/img/cockroach.svg')
+                break;
+            case 3:
+                $('.container-game .container-bug img').attr('src', 'assets/img/wasp.svg')
+                break;
+        }
     }
 
-    getLevel();
+    function getLevel() {
+        return parseInt($('.container-game .info .data-player input#levelGame').val());
+    }
+
+    function getName() {
+        return parseInt($('.container-game .info .data-player input#namePlayer').val());
+    }
+
+    function start() {
+        var level = getLevel();
+        
+        setInterval(timeControl, 1000);
+
+        switch (level) {
+            case 1:
+                changeLevelBug(level);
+                setInterval(function(){
+                    
+                    moveBug();
+                    
+                }, 800);
+                break;
+            case 2:
+                changeLevelBug(level);
+                setInterval(function(){
+                    
+                    moveBug();
+                    
+                }, 600);
+                break;
+            case 3:
+                changeLevelBug(level);
+                setInterval(function(){
+
+                    moveBug();
+                    
+                }, 400);
+                break;
+        }    
+    }
 
     randomStartPosition();
-
-    setInterval(function(){
-        
-        timeControl();
-        moveBug();
-        
-    }, 1000);
-
+    start();
     $('.container-game .container-bug img').click(scoreAdd);
 })

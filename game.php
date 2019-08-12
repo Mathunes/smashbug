@@ -34,8 +34,8 @@
                 <p>0</p>
             </div>
             <div class="data-player">
-                <input type="hidden" name="namePlayer" value="<?php echo $start->getName() ?>">
-                <input type="hidden" name="levelGame" value="<?php echo $start->getLevel() ?>">
+                <input type="hidden" name="namePlayer" id="namePlayer" value="<?php echo $start->getName() ?>">
+                <input type="hidden" name="levelGame" id="levelGame" value="<?php echo $start->getLevel() ?>">
             </div>
         </div>
         <div class="container-bug">
