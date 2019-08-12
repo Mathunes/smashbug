@@ -1,10 +1,18 @@
 $(function(){
 
+    var timer;
+    function endGame() {
+        
+    }
+
     function timeControl(){
         var seconds = $('.container-game .info .time p:last').text();
         seconds--;
         $('.container-game .info .time p:last').text(seconds);
-        // if (seconds == 0)
+        if (seconds == 0) {
+            clearInterval(timer);
+            endGame();
+        }
     }
 
     function scoreAdd(){
