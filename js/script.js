@@ -90,6 +90,35 @@ $(function(){
         $('.container-game .info .score p:last').text(score);
     }
 
+    function randomStartPosition(sizeBug) {
+        var width = $('.container-game .container-bug').width();
+        var height = $('.container-game .container-bug').height();
+
+        var positionX = Math.floor(Math.random() * width);
+        var positionY = Math.floor(Math.random() * height);
+
+        if (positionX < 80) {
+            positionX = 80;
+        } else {
+            positionX -= 80;
+        }
+
+        if (positionY < 80) {
+            positionY = 80;
+        } else {
+            positionY -= 80;
+        }
+
+        $('.container-game .container-bug img').css({
+            left: positionX+'px',
+            top: positionY+'px',
+            width: '80px',
+            transition: '.2s'
+        })
+    }
+
+    randomStartPosition();
+
     function moveBug(){
         var width = $('.container-game .container-bug').width();
         var height = $('.container-game .container-bug').height();
