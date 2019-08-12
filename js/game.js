@@ -2,7 +2,7 @@ $(function(){
 
     var timer;
     function endGame() {
-        
+        $('#modal-endgame').modal('show');
     }
 
     function timeControl(){
@@ -121,11 +121,11 @@ $(function(){
     }
 
     function getLevel() {
-        return parseInt($('.container-game .info .data-player input#levelGame').val());
+        return parseInt($('.container-game .info .data-player input#level-game').val());
     }
 
     function getName() {
-        return parseInt($('.container-game .info .data-player input#namePlayer').val());
+        return parseInt($('.container-game .info .data-player input#name-player').val());
     }
 
     function start() {
