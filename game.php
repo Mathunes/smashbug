@@ -47,7 +47,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Fim de jogo</h5>
+                            <h2 class="modal-title">Fim de jogo</h2>
                         </div>
                         <div class="modal-body text-center">
                             <h3>Jogador</h3>
@@ -58,10 +58,10 @@
                         <div class="modal-footer text-center">
                             <div class="row">
                                 <div class="col-6">
-                                    <button class="btn">Novo jogo</button>
+                                    <button class="btn btn-primary">Novo jogo</button>
                                 </div>
                                 <div class="col-6">
-                                    <button class="btn">Sair</button>
+                                    <button class="btn btn-primary">Sair</button>
                                 </div>
                             </div>
                         </div>

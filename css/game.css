@@ -43,3 +43,16 @@
 .bug-size-hard {
     width: 50px;
 }
+
+
+.modal-container .modal .modal-dialog .modal-content .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.modal-container .modal .modal-dialog .modal-content .modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
