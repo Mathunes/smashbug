@@ -13,7 +13,7 @@ session_start();
     if ($start->getLevel() == '') {
         header('location: index.php');
     } else {
-        $_SESSION['dataPlayer'] = $start;
+        $_SESSION['dataPlayer'] = serialize($start);
 
         header('location: game.php');
     }
