@@ -11,7 +11,7 @@ $(function(){
         $('.container-game .info .score p:last').text(score);
     }
 
-    function randomStartPosition(sizeBug) {
+    function randomStartPosition() {
         var width = $('.container-game .container-bug').width();
         var height = $('.container-game .container-bug').height();
 
@@ -30,12 +30,44 @@ $(function(){
             positionY -= 80;
         }
 
-        $('.container-game .container-bug img').css({
-            left: positionX+'px',
-            top: positionY+'px',
-            width: '80px',
-            transition: '.2s'
-        })
+        if (width > 700) {
+            $('.container-game .container-bug img').css({
+                left: positionX+'px',
+                top: positionY+'px',
+                width: '80px',
+                transition: '.2s'
+            })
+        } else if (width > 600) {
+            $('.container-game .container-bug img').css({
+                left: positionX+'px',
+                top: positionY+'px',
+                width: '70px',
+                transition: '.2s'
+            })
+        } else if (width > 500) {
+            $('.container-game .container-bug img').css({
+                left: positionX+'px',
+                top: positionY+'px',
+                width: '60px',
+                transition: '.2s'
+            })
+        } else if (width > 400) {
+            $('.container-game .container-bug img').css({
+                left: positionX+'px',
+                top: positionY+'px',
+                width: '50px',
+                transition: '.2s'
+            })
+        } else {
+            $('.container-game .container-bug img').css({
+                left: positionX+'px',
+                top: positionY+'px',
+                width: '40px',
+                transition: '.2s'
+            })
+        }
+
+        
     }
 
     function moveBug(){
@@ -91,6 +123,7 @@ $(function(){
         var level = getLevel();
         
         setInterval(timeControl, 1000);
+        randomStartPosition();
 
         switch (level) {
             case 1:
@@ -120,7 +153,6 @@ $(function(){
         }    
     }
 
-    randomStartPosition();
     start();
     $('.container-game .container-bug img').click(scoreAdd);
 })

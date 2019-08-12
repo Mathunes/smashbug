@@ -103,3 +103,11 @@
     left: 0;
     width: 0;
 }
+
+.bug-size-medium {
+    width: 65px;
+}
+
+.bug-size-hard {
+    width: 50px;
+}
