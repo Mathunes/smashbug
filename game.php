@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="container-bug">
-            <img src="assets/img/ant.svg" alt="">
+            <img src="assets/img/ant.svg" alt="Inseto">
         </div>
     </div>
 
