@@ -139,7 +139,6 @@ $(function(){
         
         timer = setInterval(timeControl, 1000);
 
-        console.log(timer);
         randomStartPosition();
         changeLevelBug(level);
 
@@ -170,11 +169,13 @@ $(function(){
         clearInterval(timer);
         $('#modal-endgame').modal('show');
 
-        $('#modal-endgame #new-game').click(function(){
+        $('#modal-endgame .modal-dialog .modal-content .modal-footer .row:first-child #new-game').click(function(){
             $('.container-game .info #data-player').submit();
         })
 
-        
+        $('#modal-endgame .modal-dialog .modal-content .modal-footer .row:last-child #exit').click(function(){
+            $(location).attr('href', 'index.php');
+        })
     }
 
     start();
