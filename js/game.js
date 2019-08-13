@@ -152,17 +152,17 @@ $(function(){
             case 1:
                 setInterval(function(){
                     moveBug();
-                }, 800);
+                }, 1000);
                 break;
             case 2:
                 setInterval(function(){
                     moveBug();
-                }, 600);
+                }, 800);
                 break;
             case 3:
                 setInterval(function(){
                     moveBug();
-                }, 400);
+                }, 700);
                 break;
         }    
     }
