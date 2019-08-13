@@ -33,10 +33,10 @@
                 <p>Pontuação</p>
                 <p>0</p>
             </div>
-            <div class="data-player">
-                <input type="hidden" name="namePlayer" id="name-player" value="<?php echo $start->getName() ?>">
-                <input type="hidden" name="levelGame" id="level-game" value="<?php echo $start->getLevel() ?>">
-            </div>
+            <form action="startgame.php" method="post" id="data-player">
+                <input type="hidden" name="name" id="name-player" value="<?php echo $start->getName() ?>">
+                <input type="hidden" name="level" id="level-game" value="<?php echo $start->getLevel() ?>">
+            </form>
         </div>
         <div class="container-bug">
             <img src="assets/img/ant.svg" alt="Inseto">

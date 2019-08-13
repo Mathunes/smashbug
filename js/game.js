@@ -19,7 +19,6 @@ $(function(){
         seconds--;
         $('.container-game .info .time p:last').text(seconds);
         if (seconds == 0) {
-            clearInterval(timer);
             endGame();
         }
     }
@@ -137,11 +136,10 @@ $(function(){
 
         $('.container-game .info .time p:last-child').text('1');
         $('#modal-endgame').modal('hide');
-        clearInterval(move);
         
         timer = setInterval(timeControl, 1000);
 
-        console.log(timedr);
+        console.log(timer);
         randomStartPosition();
         changeLevelBug(level);
 
@@ -169,15 +167,14 @@ $(function(){
         var name = getName();
         var level = getLevel();
 
+        clearInterval(timer);
         $('#modal-endgame').modal('show');
+
         $('#modal-endgame #new-game').click(function(){
-            $.post("startgame.php", {
-                name: 'teste',
-                level: 1,
-                }, function(result) {
-                    start();
-                });
+            $('.container-game .info #data-player').submit();
         })
+
+        
     }
 
     start();
