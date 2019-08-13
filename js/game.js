@@ -141,7 +141,7 @@ $(function(){
 
         $('.container-game .container-bug img').hide();
 
-        $('.container-game .info .time p:last-child').text('1');
+        $('.container-game .info .time p:last-child').text('10');
         
         timer = setInterval(timeControl, 1000);
 
@@ -177,6 +177,7 @@ $(function(){
         clearInterval(timer);
 
         $('#modal-endgame .modal-dialog .modal-content .modal-body #name-endgame').text(getName());
+        $('#modal-endgame .modal-dialog .modal-content .modal-body #score-endgame').text(getScore());
 
         $('#modal-endgame').modal('show');
 
