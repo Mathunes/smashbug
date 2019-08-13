@@ -5,60 +5,39 @@ $(function(){
     function darkmodeActivate() {
         $('#darkmode').attr('src', 'assets/img/firefly-darkmode.png');
 
-        $('body').css({
-            backgroundColor: '#2B2B2B',
-            transition: '0.4s'
-        });
+        $('body')
+            .addClass('darkmodeActivate')
+            .css({
+                transition: '0.3s'
+            })
 
         $('#logo').attr('src', 'assets/img/logosmash-darkmode.png');
 
-        $('.form form label').css({
-            color: '#fff'
-        });
+        $('.form form label').addClass('darkmodeActivate');
 
-        $('.records h2').css({
-            color: '#fff'
-        });
+        $('.records h2').addClass('darkmodeActivate');
 
-        $('.records table').css({
-            color: '#fff'
-        });
+        $('.records table').addClass('darkmodeActivate');
 
-        $('.modal-container .btn').css({
-            color: '#fff'
-        });
+        $('.modal-container .btn').addClass('darkmodeActivate');
 
         darkmode = true;
     }
 
     function darkmodeDisable() {
-        $('#darkmode')
-            .attr('src', 'assets/img/firefly.png')
-            .css({
-                transition: '0.4s'
-            });
+        $('#darkmode').attr('src', 'assets/img/firefly.png');
 
-        $('body').css({
-            backgroundColor: '#fff'
-        });
+        $('body').removeClass('darkmodeActivate');
 
         $('#logo').attr('src', 'assets/img/logosmash.png');
 
-        $('.form form label').css({
-            color: '#000'
-        });
+        $('.form form label').removeClass('darkmodeActivate');
 
-        $('.records h2').css({
-            color: '#000'
-        });
+        $('.records h2').removeClass('darkmodeActivate');
 
-        $('.records table').css({
-            color: '#000'
-        });
+        $('.records table').removeClass('darkmodeActivate');
 
-        $('.modal-container .btn').css({
-            color: '#000'
-        });
+        $('.modal-container .btn').removeClass('darkmodeActivate');
 
         darkmode = false;
     }
@@ -75,7 +54,5 @@ $(function(){
         }
         
     });
-
-    // =====================================================================================================
 
 })

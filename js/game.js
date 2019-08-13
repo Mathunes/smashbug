@@ -20,18 +20,13 @@ $(function(){
 
         $('#modal-endgame').modal('show');
         $('#modal-endgame #new-game').click(function(){
-            $.ajax({
-                type: "POST",
-                url: "startgame.php",
-                data: {name: name, level: level},
-                dataType: "dataType",
-                success: function (response) {
-                    alert('enviado');
-                }
-            });
-
-        });
-
+            $.post("startgame.php", {
+                name: 'teste',
+                level: 1,
+                }, function(result) {
+                    location.reload()
+                });
+        })
     }
 
     function timeControl(){
