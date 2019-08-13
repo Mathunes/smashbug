@@ -141,7 +141,7 @@ $(function(){
 
         $('.container-game .container-bug img').hide();
 
-        $('.container-game .info .time p:last-child').text('10');
+        $('.container-game .info .time p:last-child').text('20');
         
         timer = setInterval(timeControl, 1000);
 
@@ -172,20 +172,25 @@ $(function(){
         var name = getName();
         var level = getLevel();
 
-        console.log('Nome: '+name+' Nivel: '+level+' Pontos: '+score);
-
         clearInterval(timer);
 
-        $('#modal-endgame .modal-dialog .modal-content .modal-body #name-endgame').text(getName());
+        if (getName() != "") {
+            $('#modal-endgame .modal-dialog .modal-content .modal-body #name-endgame').text(getName());
+        }
+        
         $('#modal-endgame .modal-dialog .modal-content .modal-body #score-endgame').text(getScore());
+
+        $('.container-game .info #data-player #score-game').attr('value', getScore());
 
         $('#modal-endgame').modal('show');
 
         $('#modal-endgame .modal-dialog .modal-content .modal-footer .row:first-child #new-game').click(function(){
+            //Novo jogo
             $('.container-game .info #data-player').submit();
         })
 
         $('#modal-endgame .modal-dialog .modal-content .modal-footer .row:last-child #exit').click(function(){
+            //Sair
             $(location).attr('href', 'index.php');
         })
     }

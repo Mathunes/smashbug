@@ -33,9 +33,10 @@
                 <p>Pontuação</p>
                 <p>0</p>
             </div>
-            <form action="startgame.php" method="post" id="data-player">
+            <form action="saveRecords.php" method="post" id="data-player">
                 <input type="hidden" name="name" id="name-player" value="<?php echo $start->getName() ?>">
                 <input type="hidden" name="level" id="level-game" value="<?php echo $start->getLevel() ?>">
+                <input type="hidden" name="score" id="score-game" value="">
             </form>
         </div>
         <div class="container-bug">

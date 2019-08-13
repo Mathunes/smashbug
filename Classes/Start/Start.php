@@ -21,7 +21,7 @@ class Start {
     }
 
     public function getLevel() {
-        return $this->level;
+        return intval($this->level);
     }
 
     public function setLevel($level) {
@@ -29,7 +29,7 @@ class Start {
     }
 
     public function getScore() {
-        return $this->score;
+        return intval($this->score);
     }
 
     public function setScore($score) {
