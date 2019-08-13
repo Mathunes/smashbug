@@ -51,9 +51,9 @@
                         </div>
                         <div class="modal-body text-center">
                             <h3>Jogador</h3>
-                            <p>-</p>
+                            <p id="name-endgame">-</p>
                             <h3>Pontuação</h3>
-                            <p>54</p>
+                            <p id="score-endgame">0</p>
                         </div>
                         <div class="modal-footer text-center">
                             <div class="row">

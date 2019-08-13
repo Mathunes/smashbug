@@ -1,11 +1,11 @@
 $(function(){
 
     function getLevel() {
-        return parseInt($('.container-game .info .data-player input#level-game').val());
+        return parseInt($('.container-game .info #data-player input#level-game').val());
     }
 
     function getName() {
-        return $('.container-game .info .data-player input#name-player').val();
+        return $('.container-game .info #data-player input#name-player').val();
     }
 
     function getScore() {
@@ -55,38 +55,45 @@ $(function(){
                 top: positionY+'px',
                 width: '80px',
                 transition: '.2s'
-            })
+            });
+            $('.container-game .container-bug img').show('fast');
+
         } else if (width > 800) {
             $('.container-game .container-bug img').css({
                 left: positionX+'px',
                 top: positionY+'px',
                 width: '70px',
                 transition: '.2s'
-            })
+            });
+            $('.container-game .container-bug img').show('fast');
+
         } else if (width > 500) {
             $('.container-game .container-bug img').css({
                 left: positionX+'px',
                 top: positionY+'px',
                 width: '60px',
                 transition: '.2s'
-            })
+            });
+            $('.container-game .container-bug img').show('fast');
+
         } else if (width > 400) {
             $('.container-game .container-bug img').css({
                 left: positionX+'px',
                 top: positionY+'px',
                 width: '50px',
                 transition: '.2s'
-            })
+            });
+            $('.container-game .container-bug img').show('fast');
+
         } else {
             $('.container-game .container-bug img').css({
                 left: positionX+'px',
                 top: positionY+'px',
                 width: '40px',
                 transition: '.2s'
-            })
+            });
+            $('.container-game .container-bug img').show('fast');
         }
-
-        
     }
 
     function moveBug(){
@@ -127,15 +134,14 @@ $(function(){
                 break;
         }
     }
-    
-    var move;
 
     function start() {
 
         var level = getLevel();
 
+        $('.container-game .container-bug img').hide();
+
         $('.container-game .info .time p:last-child').text('1');
-        $('#modal-endgame').modal('hide');
         
         timer = setInterval(timeControl, 1000);
 
@@ -144,17 +150,17 @@ $(function(){
 
         switch (level) {
             case 1:
-                move = setInterval(function(){
+                setInterval(function(){
                     moveBug();
                 }, 800);
                 break;
             case 2:
-                move = setInterval(function(){
+                setInterval(function(){
                     moveBug();
                 }, 600);
                 break;
             case 3:
-                move = setInterval(function(){
+                setInterval(function(){
                     moveBug();
                 }, 400);
                 break;
@@ -166,7 +172,12 @@ $(function(){
         var name = getName();
         var level = getLevel();
 
+        console.log('Nome: '+name+' Nivel: '+level+' Pontos: '+score);
+
         clearInterval(timer);
+
+        $('#modal-endgame .modal-dialog .modal-content .modal-body #name-endgame').text(getName());
+
         $('#modal-endgame').modal('show');
 
         $('#modal-endgame .modal-dialog .modal-content .modal-footer .row:first-child #new-game').click(function(){
