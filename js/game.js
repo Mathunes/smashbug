@@ -141,7 +141,7 @@ $(function(){
 
         $('.container-game .container-bug img').hide();
 
-        $('.container-game .info .time p:last-child').text('20');
+        $('.container-game .info .time p:last-child').text('1');
         
         timer = setInterval(timeControl, 1000);
 
@@ -186,12 +186,14 @@ $(function(){
 
         $('#modal-endgame .modal-dialog .modal-content .modal-footer .row:first-child #new-game').click(function(){
             //Novo jogo
+            $('.container-game .info #data-player #exit').val(false); //Enviado para o back se é para finalizar o jogo
             $('.container-game .info #data-player').submit();
         })
 
         $('#modal-endgame .modal-dialog .modal-content .modal-footer .row:last-child #exit').click(function(){
             //Sair
-            $(location).attr('href', 'index.php');
+            $('.container-game .info #data-player #exit').val(true); //Enviado para o back se é para finalizar o jogo
+            $('.container-game .info #data-player').submit();
         })
     }
 

@@ -8,8 +8,9 @@ session_start();
 
     $start = new Start();
     $start->setName($_POST['name']);
-    $start->setLevel($_POST['level']);
+    $start->setLevel($_POST['level']);  
     $start->setScore($_POST['score']);
+    $exit = filter_var($_POST['exit'], FILTER_VALIDATE_BOOLEAN);
 
     switch ($start->getLevel()) {
         case 1:
@@ -29,7 +30,7 @@ session_start();
     
     $record = $result->fetchAll();
     
-    if ($start->getScore() > ($record[0]['score'])) { //Se a pontuacao for maior do que a registrada no banco de dados
+    if ($start->getScore() > ($record[0]['score'])) { //Salvando no banco apenas os maiores recordes
         $sql = "UPDATE $table SET name = ?, score = ? WHERE id = ?";
 
         $stmt = $con->prepare($sql);
@@ -39,13 +40,13 @@ session_start();
         $stmt->bindValue(3, 1);
         
         $stmt->execute();
-    
     }
+    
+    if ($exit) {
+        header('location: index.php');
+    } else {
+        $start->setScore(0);
+        $_SESSION['dataPlayer'] = serialize($start);
 
-    // if ($start->getLevel() == '') {
-    //     header('location: index.php');
-    // } else {
-    //     $_SESSION['dataPlayer'] = serialize($start);
-
-    //     header('location: game.php');
-    // }
+        header('location: game.php');
+    }
