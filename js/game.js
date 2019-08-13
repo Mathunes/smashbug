@@ -13,21 +13,6 @@ $(function(){
     }
 
     var timer;
-    function endGame() {
-        var score = getScore();
-        var name = getName();
-        var level = getLevel();
-
-        $('#modal-endgame').modal('show');
-        $('#modal-endgame #new-game').click(function(){
-            $.post("startgame.php", {
-                name: 'teste',
-                level: 1,
-                }, function(result) {
-                    location.reload()
-                });
-        })
-    }
 
     function timeControl(){
         var seconds = $('.container-game .info .time p:last').text();
@@ -133,49 +118,66 @@ $(function(){
     function changeLevelBug(level) {
         switch(level) {
             case 1:
-                $('.container-game .container-bug img').attr('src', 'assets/img/ant.svg')
+                $('.container-game .container-bug img').attr('src', 'assets/img/ant.svg');
                 break;
             case 2:
-                $('.container-game .container-bug img').attr('src', 'assets/img/cockroach.svg')
+                $('.container-game .container-bug img').attr('src', 'assets/img/cockroach.svg');
                 break;
             case 3:
-                $('.container-game .container-bug img').attr('src', 'assets/img/wasp.svg')
+                $('.container-game .container-bug img').attr('src', 'assets/img/wasp.svg');
                 break;
         }
     }
+    
+    var move;
 
     function start() {
+
         var level = getLevel();
+
+        $('.container-game .info .time p:last-child').text('1');
+        $('#modal-endgame').modal('hide');
+        clearInterval(move);
         
         timer = setInterval(timeControl, 1000);
+
+        console.log(timedr);
         randomStartPosition();
+        changeLevelBug(level);
 
         switch (level) {
             case 1:
-                changeLevelBug(level);
-                setInterval(function(){
-                    
+                move = setInterval(function(){
                     moveBug();
-                    
                 }, 800);
                 break;
             case 2:
-                changeLevelBug(level);
-                setInterval(function(){
-                    
+                move = setInterval(function(){
                     moveBug();
-                    
                 }, 600);
                 break;
             case 3:
-                changeLevelBug(level);
-                setInterval(function(){
-
+                move = setInterval(function(){
                     moveBug();
-                    
                 }, 400);
                 break;
         }    
+    }
+
+    function endGame() {
+        var score = getScore();
+        var name = getName();
+        var level = getLevel();
+
+        $('#modal-endgame').modal('show');
+        $('#modal-endgame #new-game').click(function(){
+            $.post("startgame.php", {
+                name: 'teste',
+                level: 1,
+                }, function(result) {
+                    start();
+                });
+        })
     }
 
     start();

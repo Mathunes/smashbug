@@ -17,5 +17,3 @@ session_start();
 
         header('location: game.php');
     }
-
-    
