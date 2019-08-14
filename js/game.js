@@ -188,7 +188,7 @@ $(function(){
 
         $('.container-game .container-bug img').hide();
 
-        $('.container-game .info .time p:last-child').text('60');
+        $('.container-game .info .time p:last-child').text('5');
         
         timer = setInterval(timeControl, 1000);
 
