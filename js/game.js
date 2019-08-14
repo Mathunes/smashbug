@@ -13,6 +13,12 @@ $(function(){
 
     function darkmodeActivate() {
         $('body').addClass('darkmode-activate');
+        $('.container-game .info button').addClass('darkmode-activate');
+        $('.container-game .info button').mouseover(function () { 
+            $(this).css({
+                color: '#fff'
+            })
+        });
         darkmode = true;
     }
 

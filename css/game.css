@@ -8,6 +8,13 @@
     padding: 0;
 }
 
+.container-game .info button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+}
+
 .container-game .info .info-item:first-child {
     border-right: 0;
 }

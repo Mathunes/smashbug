@@ -40,6 +40,9 @@
                 <input type="hidden" name="score" id="score-game" value="">
                 <input type="hidden" name="exit" id="exit" value="">
             </form>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
         
         <div class="container-bug">
