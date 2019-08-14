@@ -263,10 +263,11 @@ $(function(){
         $('.container-game .container-bug').append(img);
 
         $('.container-game .container-bug img:last-child')
-            .addClass('blot')
             .css({
                 position: 'absolute',
                 width: '80px',
+                zIndex: '-10',
+                opacity: '0.7',
                 top: top,
                 left: left
             })
