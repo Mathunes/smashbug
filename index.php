@@ -1,3 +1,20 @@
+<?php
+    require_once 'db_connect.php';
+
+    $sql = "SELECT * FROM records_easy";
+    $result = $con->query($sql);
+    $record_easy = $result->fetchAll();
+
+    $sql = "SELECT * FROM records_medium";
+    $result = $con->query($sql);
+    $record_medium = $result->fetchAll();
+
+    $sql = "SELECT * FROM records_hard";
+    $result = $con->query($sql);
+    $record_hard = $result->fetchAll();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
