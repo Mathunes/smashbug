@@ -56,3 +56,9 @@
     align-items: center;
     justify-content: center
 }
+
+.darkmodeActivate {
+    background-color: #2B2B2B;
+    transition: '0.3s';
+    color: #fff;
+}

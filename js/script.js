@@ -1,6 +1,7 @@
 $(function(){
 
     var darkmode = false;
+    sessionStorage.setItem('darkmode', darkmode);
 
     function darkmodeActivate() {
         $('#darkmode').attr('src', 'assets/img/firefly-darkmode.png');
@@ -47,10 +48,13 @@ $(function(){
         if (!darkmode) {
 
             darkmodeActivate();
+            sessionStorage.setItem('darkmode', darkmode);        
 
         } else {
         
             darkmodeDisable();
+            sessionStorage.setItem('darkmode', darkmode);
+
         }
         
     });

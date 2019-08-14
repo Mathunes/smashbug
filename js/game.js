@@ -1,5 +1,32 @@
 $(function(){
 
+    var darkmode = sessionStorage.getItem('darkmode');
+
+    console.log(darkmode);
+
+    function darkmodeActivate() {
+
+        $('body').addClass('darkmodeActivate')
+
+        darkmode = true;
+    }
+
+    function darkmodeDisable() {
+        $('body').removeClass('darkmodeActivate');
+
+        darkmode = false;
+    }
+
+    if (darkmode == 'true') {
+        console.log(darkmode);
+        darkmodeActivate();
+
+    } else {
+    
+        darkmodeDisable();
+
+    }
+
     function getLevel() {
         return parseInt($('.container-game .info #data-player input#level-game').val());
     }
