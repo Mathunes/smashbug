@@ -1,6 +1,9 @@
 $(function(){
 
-    var darkmode
+    var darkmode;
+    var timer;
+    var move;
+    var score = 0;
 
     if (sessionStorage.getItem('darkmode') == 'false') {
         darkmode = false;
@@ -49,22 +52,20 @@ $(function(){
     }
 
     function getScore() {
-        return $('.container-game .info .score p:last').text();
+        return score;
     }
-
-    var timer;
 
     function timeControl(){
         var seconds = $('.container-game .info .time p:last').text();
         seconds--;
         $('.container-game .info .time p:last').text(seconds);
         if (seconds == 0) {
+            $('#modal-exitgame').modal('hide');
             endGame();
         }
     }
 
     function scoreAdd(){
-        var score = $('.container-game .info .score p:last').text();
         score++;
         $('.container-game .info .score p:last').text(score);
     }
@@ -196,28 +197,25 @@ $(function(){
 
         switch (level) {
             case 1:
-                setInterval(function(){
+                move = setInterval(function(){
                     moveBug();
                 }, 1000);
                 break;
             case 2:
-                setInterval(function(){
+                move = setInterval(function(){
                     moveBug();
                 }, 800);
                 break;
             case 3:
-                setInterval(function(){
+                move = setInterval(function(){
                     moveBug();
                 }, 700);
                 break;
-        }    
+        }
     }
 
     function endGame() {
-        var score = getScore();
-        var name = getName();
-        var level = getLevel();
-
+    
         clearInterval(timer);
 
         if (getName() != "") {
@@ -245,6 +243,13 @@ $(function(){
 
     function exitGame() {
         $('#modal-exitgame').modal('show');
+
+        $('#modal-exitgame .modal-dialog .modal-content .modal-footer .row .col-6:first-child button#yes').click(function(){
+            $(location).attr('href', 'index.php');
+        });
+        $('#modal-exitgame .modal-dialog .modal-content .modal-footer .row .col-6:last-child button#no').click(function(){
+            $('#modal-exitgame').modal('hide');
+        });
     }
 
     start();

@@ -91,10 +91,10 @@
                         <div class="modal-footer text-center">
                             <div class="row">
                                 <div class="col-6">
-                                    <button class="btn btn-primary" id="new-game">Sim</button>
+                                    <button class="btn btn-primary" id="yes">Sim</button>
                                 </div>
                                 <div class="col-6">
-                                    <button type="submit" class="btn btn-primary" id="exit">Não</button>
+                                    <button type="submit" class="btn btn-primary" id="no">Não</button>
                                 </div>
                             </div>
                         </div>
