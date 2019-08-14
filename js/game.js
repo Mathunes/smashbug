@@ -91,49 +91,49 @@ $(function(){
         }
 
         if (width > 1200) {
-            $('.container-game .container-bug img').css({
+            $('.container-game .container-bug img#bug').css({
                 left: positionX+'px',
                 top: positionY+'px',
                 width: '80px',
                 transition: '.2s'
             });
-            $('.container-game .container-bug img').show('fast');
+            $('.container-game .container-bug img#bug').show('fast');
 
         } else if (width > 800) {
-            $('.container-game .container-bug img').css({
+            $('.container-game .container-bug img#bug').css({
                 left: positionX+'px',
                 top: positionY+'px',
                 width: '70px',
                 transition: '.2s'
             });
-            $('.container-game .container-bug img').show('fast');
+            $('.container-game .container-bug img#bug').show('fast');
 
         } else if (width > 500) {
-            $('.container-game .container-bug img').css({
+            $('.container-game .container-bug img#bug').css({
                 left: positionX+'px',
                 top: positionY+'px',
                 width: '60px',
                 transition: '.2s'
             });
-            $('.container-game .container-bug img').show('fast');
+            $('.container-game .container-bug img#bug').show('fast');
 
         } else if (width > 400) {
-            $('.container-game .container-bug img').css({
+            $('.container-game .container-bug img#bug').css({
                 left: positionX+'px',
                 top: positionY+'px',
                 width: '50px',
                 transition: '.2s'
             });
-            $('.container-game .container-bug img').show('fast');
+            $('.container-game .container-bug img#bug').show('fast');
 
         } else {
-            $('.container-game .container-bug img').css({
+            $('.container-game .container-bug img#bug').css({
                 left: positionX+'px',
                 top: positionY+'px',
                 width: '40px',
                 transition: '.2s'
             });
-            $('.container-game .container-bug img').show('fast');
+            $('.container-game .container-bug img#bug').show('fast');
         }
     }
 
@@ -154,7 +154,7 @@ $(function(){
             positionY -= 80;
         }
 
-        $('.container-game .container-bug img').css({
+        $('.container-game .container-bug img#bug').css({
             left: positionX+'px',
             top: positionY+'px',
             transition: 'all 1s',
@@ -164,19 +164,19 @@ $(function(){
 
     function changeLevelBug(level) {
         if (darkmode) {
-            $('.container-game .container-bug img')
+            $('.container-game .container-bug img#bug')
                 .attr('src', 'assets/img/firefly-darkmode.png')
                 .addClass('firefly-darkmode');
         } else {
             switch(level) {
                 case 1:
-                    $('.container-game .container-bug img').attr('src', 'assets/img/ant.svg');
+                    $('.container-game .container-bug img#bug').attr('src', 'assets/img/ant.svg');
                     break;
                 case 2:
-                    $('.container-game .container-bug img').attr('src', 'assets/img/cockroach.svg');
+                    $('.container-game .container-bug img#bug').attr('src', 'assets/img/cockroach.svg');
                     break;
                 case 3:
-                    $('.container-game .container-bug img').attr('src', 'assets/img/wasp.svg');
+                    $('.container-game .container-bug img#bug').attr('src', 'assets/img/wasp.svg');
                     break;
             }
         }
@@ -186,7 +186,7 @@ $(function(){
 
         var level = getLevel();
 
-        $('.container-game .container-bug img').hide();
+        $('.container-game .container-bug img#bug').hide();
 
         $('.container-game .info .time p:last-child').text('60');
         
@@ -260,11 +260,13 @@ $(function(){
         var img = document.createElement('img');
         img.src = 'assets/img/blot.png';
 
-        $('.container-game').append(img);
+        $('.container-game .container-bug').append(img);
 
-        $('.container-game img:last-child')
+        $('.container-game .container-bug img:last-child')
             .addClass('blot')
             .css({
+                position: 'absolute',
+                width: '80px',
                 top: top,
                 left: left
             })
@@ -274,7 +276,7 @@ $(function(){
     start();
 
     $('.container-game .info button').click(exitGame);
-    $('.container-game .container-bug img')
+    $('.container-game .container-bug img#bug')
         .click(scoreAdd)
         .click(showBlot);
 

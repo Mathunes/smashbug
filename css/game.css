@@ -40,6 +40,7 @@
     top: 0;
     left: 0;
     width: 0;
+    z-index: 10;
 }
 
 .bug-size-medium {

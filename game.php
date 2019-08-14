@@ -46,7 +46,7 @@
         </div>
         
         <div class="container-bug">
-            <img src="assets/img/ant.svg" alt="Inseto">
+            <img src="assets/img/ant.svg" alt="Inseto" id="bug">
         </div>
 
         <div class="modal-container d-flex justify-content-center">            
