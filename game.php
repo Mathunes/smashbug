@@ -76,6 +76,33 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal-container-exit d-flex justify-content-center">            
+            <div class="modal fade" id="modal-exitgame" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Sair do jogo</h2>
+                        </div>
+                        <div class="modal-body text-center">
+                            <h3>Deseja realmente finalizar a partida?</h3>
+                            <h2>Os dados não serão dados.</h2>
+                        </div>
+                        <div class="modal-footer text-center">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button class="btn btn-primary" id="new-game">Sim</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="submit" class="btn btn-primary" id="exit">Não</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
