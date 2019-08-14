@@ -16,6 +16,8 @@ class Start {
                 $newName[i] = $name[i];
             }
             $name = $newName;
+        } else if (strlen($name) == 0) {
+            $name = '-';
         }
         $this->name = filter_var($name, FILTER_SANITIZE_SPECIAL_CHARS);
     }

@@ -61,6 +61,25 @@
                         <th class="col-4">Difícil</th>
                     </tr>
                 </thead>
+                <tbody>
+                    <tr class="row">
+                        <td class="col-4">
+                            <?php 
+                                echo $record_easy[0]['name'].'<br>'.$record_easy[0]['score'];
+                            ?>
+                        </td>
+                        <td class="col-4">
+                            <?php 
+                                echo $record_medium[0]['name'].'<br>'.$record_medium[0]['score'];
+                            ?>
+                        </td>
+                        <td class="col-4">
+                            <?php 
+                                echo $record_hard[0]['name'].'<br>'.$record_hard[0]['score'];
+                            ?>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
 
         </div>
