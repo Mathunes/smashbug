@@ -188,7 +188,7 @@ $(function(){
 
         $('.container-game .container-bug img').hide();
 
-        $('.container-game .info .time p:last-child').text('5');
+        $('.container-game .info .time p:last-child').text('60');
         
         timer = setInterval(timeControl, 1000);
 
@@ -252,8 +252,31 @@ $(function(){
         });
     }
 
+    function showBlot() {
+        var position = $('.container-game .container-bug img').position();
+        var top = position.top;
+        var left = position.left;
+        
+        var img = document.createElement('img');
+        img.src = 'assets/img/blot.png';
+
+        $('.container-game').append(img);
+
+        $('.container-game img:last-child')
+            .addClass('blot')
+            .css({
+                top: top,
+                left: left
+            })
+
+    }
+
     start();
 
     $('.container-game .info button').click(exitGame);
-    $('.container-game .container-bug img').click(scoreAdd);
+    $('.container-game .container-bug img')
+        .click(scoreAdd)
+        .click(showBlot);
+
+    // <a href="https://br.freepik.com/fotos-vetores-gratis/mao">Mão vetor criado por milano83 - br.freepik.com</a>
 })
