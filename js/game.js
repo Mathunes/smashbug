@@ -1,31 +1,33 @@
 $(function(){
 
-    var darkmode = sessionStorage.getItem('darkmode');
+    var darkmode
 
-    console.log(darkmode);
+    if (sessionStorage.getItem('darkmode') == 'false') {
+        darkmode = false;
+    } else if (sessionStorage.getItem('darkmode') == 'true') {
+        darkmode = true;
+        darkmodeActivate();
+    } else {
+        darkmode = false;
+    }
 
     function darkmodeActivate() {
-
         $('body').addClass('darkmodeActivate')
-
         darkmode = true;
     }
 
     function darkmodeDisable() {
         $('body').removeClass('darkmodeActivate');
-
         darkmode = false;
     }
 
-    if (darkmode == 'true') {
-        console.log(darkmode);
+    if (darkmode) {
         darkmodeActivate();
-
     } else {
-    
         darkmodeDisable();
-
     }
+
+    sessionStorage.setItem('darkmode', darkmode);
 
     function getLevel() {
         return parseInt($('.container-game .info #data-player input#level-game').val());

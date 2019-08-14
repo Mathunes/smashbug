@@ -1,15 +1,25 @@
 $(function(){
 
-    var darkmode = false;
+    var darkmode;
+
+    if (sessionStorage.getItem('darkmode') == 'false') {
+        darkmode = false;
+    } else if (sessionStorage.getItem('darkmode') == 'true') {
+        darkmode = true;
+        darkmodeActivate('0');
+    } else {
+        darkmode = false;
+    }
+
     sessionStorage.setItem('darkmode', darkmode);
 
-    function darkmodeActivate() {
+    function darkmodeActivate(transition = '0.3s') {
         $('#darkmode').attr('src', 'assets/img/firefly-darkmode.png');
 
         $('body')
             .addClass('darkmodeActivate')
             .css({
-                transition: '0.3s'
+                transition: transition
             })
 
         $('#logo').attr('src', 'assets/img/logosmash-darkmode.png');
@@ -48,15 +58,13 @@ $(function(){
         if (!darkmode) {
 
             darkmodeActivate();
-            sessionStorage.setItem('darkmode', darkmode);        
 
         } else {
         
             darkmodeDisable();
-            sessionStorage.setItem('darkmode', darkmode);
 
         }
-        
+        sessionStorage.setItem('darkmode', darkmode);
     });
 
 })
