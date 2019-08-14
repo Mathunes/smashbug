@@ -14,7 +14,9 @@ $(function(){
     sessionStorage.setItem('darkmode', darkmode);
 
     function darkmodeActivate(transition = '0.3s') {
-        $('#darkmode').attr('src', 'assets/img/firefly-darkmode.png');
+        $('#darkmode')
+            .attr('src', 'assets/img/firefly-darkmode.png')
+            .addClass('firefly-darkmode')
 
         $('body')
             .addClass('darkmodeActivate')

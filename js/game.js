@@ -151,16 +151,22 @@ $(function(){
     }
 
     function changeLevelBug(level) {
-        switch(level) {
-            case 1:
-                $('.container-game .container-bug img').attr('src', 'assets/img/ant.svg');
-                break;
-            case 2:
-                $('.container-game .container-bug img').attr('src', 'assets/img/cockroach.svg');
-                break;
-            case 3:
-                $('.container-game .container-bug img').attr('src', 'assets/img/wasp.svg');
-                break;
+        if (darkmode) {
+            $('.container-game .container-bug img')
+                .attr('src', 'assets/img/firefly-darkmode.png')
+                .addClass('firefly-darkmode');
+        } else {
+            switch(level) {
+                case 1:
+                    $('.container-game .container-bug img').attr('src', 'assets/img/ant.svg');
+                    break;
+                case 2:
+                    $('.container-game .container-bug img').attr('src', 'assets/img/cockroach.svg');
+                    break;
+                case 3:
+                    $('.container-game .container-bug img').attr('src', 'assets/img/wasp.svg');
+                    break;
+            }
         }
     }
 
