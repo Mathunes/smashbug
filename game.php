@@ -24,6 +24,7 @@
 </head>
 <body>
     <div class="container-game">
+
         <div class="info row">
             <div class="time info-item col-6">
                 <p>Tempo</p>
@@ -40,6 +41,7 @@
                 <input type="hidden" name="exit" id="exit" value="">
             </form>
         </div>
+        
         <div class="container-bug">
             <img src="assets/img/ant.svg" alt="Inseto">
         </div>

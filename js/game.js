@@ -12,12 +12,12 @@ $(function(){
     }
 
     function darkmodeActivate() {
-        $('body').addClass('darkmodeActivate')
+        $('body').addClass('darkmode-activate');
         darkmode = true;
     }
 
     function darkmodeDisable() {
-        $('body').removeClass('darkmodeActivate');
+        $('body').removeClass('darkmode-activate');
         darkmode = false;
     }
 

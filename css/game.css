@@ -5,7 +5,6 @@
 }
 
 .container-game .info .info-item {
-    border: 3px solid #000;
     padding: 0;
 }
 
@@ -44,7 +43,6 @@
     width: 50px;
 }
 
-
 .modal-container .modal .modal-dialog .modal-content .modal-header {
     display: flex;
     align-items: center;
@@ -57,7 +55,7 @@
     justify-content: center
 }
 
-.darkmodeActivate {
+.darkmode-activate {
     background-color: #2B2B2B;
     transition: '0.3s';
     color: #fff;

@@ -19,20 +19,20 @@ $(function(){
             .addClass('firefly-darkmode')
 
         $('body')
-            .addClass('darkmodeActivate')
+            .addClass('darkmode-activate')
             .css({
                 transition: transition
             })
 
         $('#logo').attr('src', 'assets/img/logosmash-darkmode.png');
 
-        $('.form form label').addClass('darkmodeActivate');
+        $('.form form label').addClass('darkmode-activate');
 
-        $('.records h2').addClass('darkmodeActivate');
+        $('.records h2').addClass('darkmode-activate');
 
-        $('.records table').addClass('darkmodeActivate');
+        $('.records table').addClass('darkmode-activate');
 
-        $('.modal-container .btn').addClass('darkmodeActivate');
+        $('.modal-container .btn').addClass('darkmode-activate');
 
         darkmode = true;
     }
@@ -40,17 +40,17 @@ $(function(){
     function darkmodeDisable() {
         $('#darkmode').attr('src', 'assets/img/firefly.png');
 
-        $('body').removeClass('darkmodeActivate');
+        $('body').removeClass('darkmode-activate');
 
         $('#logo').attr('src', 'assets/img/logosmash.png');
 
-        $('.form form label').removeClass('darkmodeActivate');
+        $('.form form label').removeClass('darkmode-activate');
 
-        $('.records h2').removeClass('darkmodeActivate');
+        $('.records h2').removeClass('darkmode-activate');
 
-        $('.records table').removeClass('darkmodeActivate');
+        $('.records table').removeClass('darkmode-activate');
 
-        $('.modal-container .btn').removeClass('darkmodeActivate');
+        $('.modal-container .btn').removeClass('darkmode-activate');
 
         darkmode = false;
     }
