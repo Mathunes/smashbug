@@ -24,6 +24,11 @@ $(function(){
 
     function darkmodeDisable() {
         $('body').removeClass('darkmode-activate');
+        $('.container-game .info button').mouseover(function () { 
+            $(this).css({
+                color: '#000'
+            })
+        });
         darkmode = false;
     }
 
@@ -238,6 +243,12 @@ $(function(){
         })
     }
 
+    function exitGame() {
+        $('#modal-exitgame').modal('show');
+    }
+
     start();
+
+    $('.container-game .info button').click(exitGame);
     $('.container-game .container-bug img').click(scoreAdd);
 })

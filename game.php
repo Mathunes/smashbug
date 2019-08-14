@@ -86,7 +86,7 @@
                         </div>
                         <div class="modal-body text-center">
                             <h3>Deseja realmente finalizar a partida?</h3>
-                            <h2>Os dados não serão dados.</h2>
+                            <p>Os dados não serão dados.</p>
                         </div>
                         <div class="modal-footer text-center">
                             <div class="row">
@@ -102,7 +102,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
