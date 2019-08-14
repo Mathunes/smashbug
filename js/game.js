@@ -259,6 +259,7 @@ $(function(){
         
         var img = document.createElement('img');
         img.src = 'assets/img/blot.png';
+        img.alt = 'Vetor criado por milano83 - br.freepik.com - link: https://br.freepik.com/fotos-vetores-gratis/mao';
 
         $('.container-game .container-bug').append(img);
 
@@ -280,6 +281,4 @@ $(function(){
     $('.container-game .container-bug img#bug')
         .click(scoreAdd)
         .click(showBlot);
-
-    // <a href="https://br.freepik.com/fotos-vetores-gratis/mao">Mão vetor criado por milano83 - br.freepik.com</a>
 })
