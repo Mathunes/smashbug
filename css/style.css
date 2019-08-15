@@ -1,3 +1,14 @@
+body {
+    background-image: url('/assets/img/background.png');
+    background-size: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        background-image: url('/assets/img/background2.png');
+    }
+}
+
 .container #logo {
     width: 60%;
 }
