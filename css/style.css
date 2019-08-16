@@ -11,9 +11,16 @@ body {
     }
 }
 
-.container #logo {
-    width: 50%;
+.container .row .col-8 #logo {
+    width: 48%;
 }
+
+@media screen and (max-width: 500px) {
+    .container .row .col-8 {
+        padding-right: 0;
+    }
+}
+
 @media (max-width: 700px) {
     .container #logo {
         width: 70%;
