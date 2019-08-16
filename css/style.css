@@ -74,6 +74,10 @@ body {
     color: #fff;
 }
 
+.darkmode-activate-text {
+    color: #ccc;
+}
+
 .modal-container .modal .modal-dialog .modal-content .modal-footer {
     display: flex;
     align-items: center;

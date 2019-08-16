@@ -36,11 +36,11 @@ $(function(){
 
         $('#logo').attr('src', 'assets/img/logosmash-darkmode.png');
 
-        $('.form form label').addClass('darkmode-activate');
+        $('.form form label').addClass('darkmode-activate-text');
 
-        $('.records h2').addClass('darkmode-activate');
+        $('.records h2').addClass('darkmode-activate-text');
 
-        // $('.records table').addClass('darkmode-activate');
+        $('.records table').addClass('darkmode-activate-text');
 
         $('.modal-container .btn').addClass('darkmode-activate');
 
@@ -65,11 +65,11 @@ $(function(){
 
         $('#logo').attr('src', 'assets/img/logosmash.png');
 
-        $('.form form label').removeClass('darkmode-activate');
+        $('.form form label').removeClass('darkmode-activate-text');
 
-        $('.records h2').removeClass('darkmode-activate');
+        $('.records h2').removeClass('darkmode-activate-text');
 
-        $('.records table').removeClass('darkmode-activate');
+        $('.records table').removeClass('darkmode-activate-text');
 
         $('.modal-container .btn').removeClass('darkmode-activate');
 
