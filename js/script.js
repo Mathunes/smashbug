@@ -24,13 +24,23 @@ $(function(){
                 transition: transition
             })
 
+            if ($('body').width() < 1200) {
+                $('body').css({
+                    backgroundImage: 'url(/assets/img/background2Darkmode.png)'
+                })
+            } else {
+                $('body').css({
+                    backgroundImage: 'url(/assets/img/backgroundDarkmode.png)'
+                })
+            }
+
         $('#logo').attr('src', 'assets/img/logosmash-darkmode.png');
 
         $('.form form label').addClass('darkmode-activate');
 
         $('.records h2').addClass('darkmode-activate');
 
-        $('.records table').addClass('darkmode-activate');
+        // $('.records table').addClass('darkmode-activate');
 
         $('.modal-container .btn').addClass('darkmode-activate');
 
@@ -40,7 +50,18 @@ $(function(){
     function darkmodeDisable() {
         $('#darkmode').attr('src', 'assets/img/firefly.png');
 
-        $('body').removeClass('darkmode-activate');
+        $('body')
+            .removeClass('darkmode-activate')
+
+        if ($('body').width() < 1200) {
+            $('body').css({
+                backgroundImage: 'url(/assets/img/background2.png)'
+            })
+        } else {
+            $('body').css({
+                backgroundImage: 'url(/assets/img/background.png)'
+            })
+        }
 
         $('#logo').attr('src', 'assets/img/logosmash.png');
 
