@@ -95,4 +95,14 @@ body {
     margin-bottom: 16px;
 }
 
+
+    .darkmode-btn {
+        background-color: blue;
+    }
+
+.modal-container .btn-success {
+    background-color: #39B388;
+    margin-bottom: 20px;
+}
+
 /* ===================================================================================================================== */

@@ -42,7 +42,7 @@ $(function(){
 
         $('.records table').addClass('darkmode-activate-text');
 
-        $('.modal-container .btn').addClass('darkmode-activate');
+        $('.modal-container .btn-success').addClass('darkmode-btn');
 
         darkmode = true;
     }
@@ -71,7 +71,7 @@ $(function(){
 
         $('.records table').removeClass('darkmode-activate-text');
 
-        $('.modal-container .btn').removeClass('darkmode-activate');
+        $('.modal-container .btn-success').removeClass('darkmode-btn');
 
         darkmode = false;
     }
