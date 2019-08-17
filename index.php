@@ -44,7 +44,7 @@
                     <option value="2">Médio</option>
                     <option value="3">Difícil</option>
                 </select>
-
+    
                 <input type="text" name="name" maxlength="10" placeholder="Nome do jogador" class="form-control" id="name">
 
                 <input type="submit" value="Jogar" name="start" class="form-control">
@@ -102,11 +102,13 @@
                             </button>
                         </div>
                         <div class="modal-body text-center">
-                            Apenas esmague os insetos!
+                            <p>Jogo desenvolvido com o objetivo de explorar algumas funcionalidades do JavaScript/Jquery.</p>
+                            <p>Sobre a funcionamento do jogo, apenas esmague os insetos!</p>
+                            <span>Obs.: Nenhum inseto real foi maltrado durante o desenvolvimento.</span>
                         </div>
                         <div class="modal-footer text-center">
                             <div>
-                                <h6>Contato</h6>
+                               <h6>Contato</h6>
                                <a href="mailto:matheusantunes720@gmail.com">matheusantunes720@gmail.com</a>
                             </div>
                         </div>

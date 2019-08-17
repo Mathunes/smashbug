@@ -78,11 +78,14 @@ body {
 
 .darkmode-activate {
     background-color: #202124;
-    color: #fff;
 }
 
 .darkmode-activate-text {
     color: #ccc;
+}
+
+.modal-container .modal .modal-dialog .modal-content .modal-body span {
+    font-size: 12px;
 }
 
 .modal-container .modal .modal-dialog .modal-content .modal-footer {
@@ -95,10 +98,14 @@ body {
     margin-bottom: 16px;
 }
 
+.modal-container .modal .modal-dialog .modal-content .modal-footer div a {
+    color: #39B388
+}
 
-    .darkmode-btn {
-        background-color: blue;
-    }
+.modal-container .modal .modal-dialog .modal-content .modal-footer div a:hover {
+    text-decoration: none;
+    color: #448f75;
+}
 
 .modal-container .btn-success {
     background-color: #39B388;
