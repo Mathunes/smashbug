@@ -102,14 +102,5 @@ body {
     color: #39B388
 }
 
-.modal-container .modal .modal-dialog .modal-content .modal-footer div a:hover {
-    text-decoration: none;
-    color: #448f75;
-}
-
-.modal-container .btn-success {
-    background-color: #39B388;
-    margin-bottom: 20px;
-}
 
 /* ===================================================================================================================== */
