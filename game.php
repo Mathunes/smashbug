@@ -23,6 +23,7 @@
     <title>SmashBug</title>
 </head>
 <body>
+
     <div class="container-game">
 
         <div class="info row">

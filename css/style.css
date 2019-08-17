@@ -99,8 +99,14 @@ body {
 }
 
 .modal-container .modal .modal-dialog .modal-content .modal-footer div a {
-    color: #39B388
+    color: #39B388;
 }
 
+.modal-container .modal .modal-dialog .modal-content .modal-footer div a:hover {
+    color: #3fa17e;
+    text-decoration: none
+}
 
-/* ===================================================================================================================== */
+.modal-container .btn {
+    margin-bottom: 20px;
+}

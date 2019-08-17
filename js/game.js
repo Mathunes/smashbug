@@ -38,7 +38,7 @@ $(function(){
     if (darkmode) {
         darkmodeActivate();
     } else {
-        darkmodeDisabutle();
+        darkmodeDisable();
     }
 
     sessionStorage.setItem('darkmode', darkmode);
