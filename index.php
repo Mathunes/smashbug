@@ -23,6 +23,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/jpg" href="assets/img/icon.jpg">
     <title>SmashBug</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
                 <img src="assets/img/logosmash.png" alt="Logo SmashBug" id="logo">
             </div>
             <div class="col-4 container-darkmode">
-                <img src="assets/img/firefly.png" alt="Vagalume tomada do darkmode" id="darkmode" class="align-middle">
+                <img src="assets/img/firefly-button.png" alt="Vagalume tomada do darkmode" id="darkmode" class="align-middle">
             </div>
         </div>
 
@@ -104,7 +105,7 @@
                         <div class="modal-body text-center">
                             <p>Jogo desenvolvido com o objetivo de explorar algumas funcionalidades do JavaScript/Jquery.</p>
                             <p>Sobre o funcionamento do jogo, apenas esmague os insetos!</p>
-                            <span>Obs.: Nenhum inseto real foi maltrado durante o desenvolvimento.</span>
+                            <span>Obs.: Nenhum inseto real foi maltrado durante a produção.</span>
                         </div>
                         <div class="modal-footer text-center">
                             <div>

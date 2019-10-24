@@ -66,8 +66,16 @@ body {
     justify-content: center
 }
 
+.modal-container .modal .modal-dialog .modal-content .modal-footer .row, .modal-container-exit .modal .modal-dialog .modal-content .modal-footer .row {
+    width: 100%;
+}
+
 .darkmode-activate {
     background-color: #202124;
     transition: '0.3s';
     color: #fff;
+}
+
+.darkmode-activate-modal-endgame {
+    color: #000;
 }

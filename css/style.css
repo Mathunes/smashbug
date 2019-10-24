@@ -76,6 +76,10 @@ body {
     transition: '0.3s'
 }
 
+#darkmode:hover {
+    cursor: pointer;
+}
+
 .darkmode-activate {
     background-color: #202124;
 }

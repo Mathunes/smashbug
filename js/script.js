@@ -15,7 +15,7 @@ $(function(){
 
     function darkmodeActivate(transition = '0.3s') {
         $('#darkmode')
-            .attr('src', 'assets/img/firefly-darkmode.png')
+            .attr('src', 'assets/img/firefly-button-darkmode.png')
             .addClass('firefly-darkmode')
 
         $('body')
@@ -46,7 +46,7 @@ $(function(){
     }
 
     function darkmodeDisable() {
-        $('#darkmode').attr('src', 'assets/img/firefly.png');
+        $('#darkmode').attr('src', 'assets/img/firefly-button.png');
 
         $('body')
             .removeClass('darkmode-activate')

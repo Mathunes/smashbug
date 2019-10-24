@@ -16,6 +16,12 @@ $(function(){
 
     function darkmodeActivate() {
         $('body').addClass('darkmode-activate');
+        $('.modal-container').css({
+            color: '#212529'
+        });
+        $('.modal-container-exit .modal .modal-dialog .modal-content').css({
+            color: '#212529'
+        })
         $('.container-game .info button').addClass('darkmode-activate');
         $('.container-game .info button').mouseover(function () { 
             $(this).css({

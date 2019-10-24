@@ -66,10 +66,10 @@
                         <div class="modal-footer text-center">
                             <div class="row">
                                 <div class="col-6">
-                                    <button class="btn btn-primary" id="new-game">Novo jogo</button>
+                                    <button class="btn btn-success" id="new-game">Novo jogo</button>
                                 </div>
                                 <div class="col-6">
-                                    <button type="submit" class="btn btn-primary" id="exit">Sair</button>
+                                    <button type="submit" class="btn btn-success" id="exit">Sair</button>
                                 </div>
                             </div>
                         </div>
@@ -87,15 +87,15 @@
                         </div>
                         <div class="modal-body text-center">
                             <h3>Deseja realmente finalizar a partida?</h3>
-                            <p>Os dados não serão dados.</p>
+                            <p>Os dados serão perdidos.</p>
                         </div>
                         <div class="modal-footer text-center">
                             <div class="row">
                                 <div class="col-6">
-                                    <button class="btn btn-primary" id="yes">Sim</button>
+                                    <button class="btn btn-success" id="yes">Sim</button>
                                 </div>
                                 <div class="col-6">
-                                    <button type="submit" class="btn btn-primary" id="no">Não</button>
+                                    <button type="submit" class="btn btn-success" id="no">Não</button>
                                 </div>
                             </div>
                         </div>
